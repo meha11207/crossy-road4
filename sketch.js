@@ -2,11 +2,10 @@ var grid = 50;
 var width = 1366;
 var carGroup1,logGroup1;
 var grassHeight = 100;
-var gameState = "play";
+
 var carAnimation1,carAnimation2, logAnimation, playerAnimation,playerImage;
 var school;
 var city,cityAnimation;
-var gamestate="play";
 
 function preload()
 {
@@ -86,36 +85,22 @@ function draw() {
     player.spt.x=width/2;
     player.spt.y = height-75;
   }
-  if(city.isTouching(player.spt))
-  {
-    gameState = "WIN";
-  }
-  if(gameState === "WIN")
-  {
-    stroke("green");
-    fill("green");
-    textSize(40);
-    text("Congratulations! You Made IT",width/2-250,-1700)
-    carGroup1.destroyEach();
-    logGroup1.destroyEach();
-  }
-  keyPressed();
+ 
 
-  drawSprites();
-}
-
-function keyPressed(){
-  if(KeyDown("up"))
+  if(keyDown("up"))
   {
     player.move(0,-2);
   } 
-   if(KeyDown("down")){
+   if(keyDown("down")){
     player.move(0,2);
   } 
-   if(KeyDown("left")){
+   if(keyDown("left")){
     player.move(-2,0);
   } 
-   if(KeyDown("right")) {
+   if(keyDown("right")) {
     player.move(2,0);
   }
+  
+
+  drawSprites();
 }
