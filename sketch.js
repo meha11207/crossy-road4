@@ -54,16 +54,16 @@ function draw() {
   translate(0,-player.spt.y+height-150);
   for(i=1;i<logGroup1.length;i++)
   {
-    if(logGroup1[i].i<0)
-    logGroup1[i].x=width;
+    if(logGroup1.i<0)
+    logGroup1.x=width;
   }
   for(i=1;carGroup1.lenght;i++)
   {
-    if(carGroup1[i].i<0){
-      carGroup1[i].x=width;
+    if(carGroup1.i<0){
+      carGroup1.x=width;
     }
-   if(carGroup1[i].x=width){
-    carGroup1[i].i<0;
+   if(carGroup1.x=width){
+    carGroup1.x<0;
    }
   }
 
